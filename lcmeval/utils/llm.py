@@ -31,8 +31,7 @@ class LLM:
         base_missing = "OPENAI_API_BASE" not in os.environ
         model_missing = "MODEL_ID" not in os.environ
         if key_missing or base_missing or model_missing:
-            current_dir = os.getcwd()
-            env_path = os.path.join(current_dir, '.env')
+            env_path = CONFIG["env_file"]
             if not os.path.exists(env_path):
                 env_path = find_dotenv()
             load_dotenv(dotenv_path=env_path)

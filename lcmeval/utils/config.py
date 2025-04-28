@@ -10,6 +10,7 @@ class Config(TypedDict):
     timeout: int      # Timeout for LLM API calls
     max_retries: int  # Maximum number of retries for API calls
     max_tokens: int   # Maximum number of completion tokens
+    env_file: str     # Path to the .env file
 
 
 CONFIG: Config = {
@@ -17,6 +18,7 @@ CONFIG: Config = {
     "timeout": 120,
     "max_retries": 0,
     "max_tokens": 4096,
+    "env_file": ".env",
 }
 
 
@@ -25,6 +27,7 @@ def update_config(config: Config, kwargs: Dict[str, Any]):
         if key in config and value is not None:
             config[key] = value
     config["runs_dir"] = pathlib.Path(config["runs_dir"]).expanduser().resolve().as_posix()
+    config["env_file"] = pathlib.Path(config["env_file"]).expanduser().resolve().as_posix()
 
 
 def dump_config(config: Config):
