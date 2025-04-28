@@ -9,10 +9,13 @@ description = "LCM Evaluation"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "beautifulsoup4>=4.13.4",
     "pyyaml>=6.0.2",
+    "requests>=2.32.3",
 ]
 
 [tool.setuptools]
 packages = [
     "lcmeval",
+    "lcmeval.crawler",
 ]

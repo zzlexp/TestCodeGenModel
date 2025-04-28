@@ -1,8 +1,7 @@
 # coding =utf-8
 import sys
 from venv import logger
-sys.path.append("/Users/lichongyang/Documents/Research/research_projects/TestCodeGenModel/")
-from utils import set_logger
+from lcmeval.utils import set_logger
 from bs4 import BeautifulSoup
 import json
 import time
