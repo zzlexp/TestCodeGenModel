@@ -1,7 +1,7 @@
 # coding =utf-8
 import sys
 from venv import logger
-from lcmeval.utils import set_logger
+from lcmeval.utils import setup_logger
 from bs4 import BeautifulSoup
 import json
 import time
@@ -358,7 +358,7 @@ class NumpyDocCrawler:
             json.dump(data, f, ensure_ascii=False, indent=4)        
 
 if __name__ == '__main__':
-    logger = set_logger("/Users/lichongyang/Documents/Research/research_projects/TestCodeGenModel/routines.html#routines.log")
+    logger = setup_logger("/Users/lichongyang/Documents/Research/research_projects/TestCodeGenModel/routines.html#routines.log")
     crawler = NumpyDocCrawler(logger=logger, root_path="/Users/lichongyang/Documents/Research/research_projects/TestCodeGenModel/")
     crawler.retrieve_np_namespace_random_generator_legacy()
     # page = crawler.get_page("https://www.baidu.com")
