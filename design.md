@@ -9,6 +9,7 @@ Specifically, 1085 apis has been collected. Note that there may be some omission
 
 ## API-coverage
 Exploring the Combinatorial Testing to derive a more powerful coverage. This coverage criterion is used to guide the selection of APIs.
+TODO: Considering the combinatorial testing would produce too many cases to be tested, we should use some criteria to guide the selection of APIs, like the popularity of the APIs.
 
 ## How to prompt LLMs?
 TODO:
