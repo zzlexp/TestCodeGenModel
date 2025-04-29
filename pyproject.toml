@@ -21,5 +21,7 @@ dependencies = [
 packages = [
     "lcmeval",
     "lcmeval.crawler",
+    "lcmeval.test_generation",
+    "lcmeval.agents",
     "lcmeval.utils",
 ]
