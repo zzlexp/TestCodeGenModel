@@ -1,4 +1,4 @@
-from .helper import timestamp
+from .helper import timestamp, extract_xml
 from .log import setup_logger
 from .config import (
     CONFIG,
@@ -15,6 +15,7 @@ from .llm import (
 
 __all__ = [
     'timestamp',
+    'extract_xml',
     'setup_logger',
     'CONFIG',
     'update_config',

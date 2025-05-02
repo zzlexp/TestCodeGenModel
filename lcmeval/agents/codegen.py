@@ -23,7 +23,7 @@ class Conversation:
     think: Optional[str] = None
 
 
-class CodeGenAgent:
+class CodeGen:
     def __init__(self, prompt_template=PROMPT_TEMPLATE):
         self.prompt_template = prompt_template
         self.llm = LLM(system_prompt=SYSTEM_PROMPT)
@@ -51,20 +51,20 @@ class CodeGenAgent:
 
 if __name__ == "__main__":
     from lcmeval.test_generation import coverage
-    from lcmeval.agents.taskgen import TaskGenAgent
+    from lcmeval.agents.taskgen import ProbGen
 
     cov = coverage.CTAPICoverage.from_csv("lcmeval/crawler/numpy_apis/apis.csv", 1)
     api_names, api_details = cov.generate_api_combination()
     print(f"The selected APIS are: {api_names}")
 
-    taskgen_agent = TaskGenAgent()
-    task = taskgen_agent.generate_task(api_names, api_details)
-    print(taskgen_agent.history[-1].prompt)
+    probgen = ProbGen()
+    task = probgen.generate(api_names, api_details)
+    print(probgen.history[-1].prompt)
     print(f'The generated task is:\n\n{task}')
 
-    codegen_agent = CodeGenAgent()
-    code = codegen_agent.generate_code(task)
-    print(codegen_agent.history[-1].prompt)
+    codegen = CodeGen()
+    code = codegen.generate_code(task)
+    print(codegen.history[-1].prompt)
     print(f'\nThe generated code is:\n\n{code}')
 
     cov.update_coverage((api_names))
