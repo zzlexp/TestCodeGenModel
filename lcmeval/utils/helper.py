@@ -8,8 +8,7 @@ def timestamp() -> str:
     return datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
 
-def extract_xml(text: str, tag: str) -> str:
-    # This is a comment    
+def extract_xml(text: str, tag: str) -> str:   
     """
     Extracts the content of the specified XML tag from the given text. Used for parsing structured responses 
 
