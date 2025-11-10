@@ -3,6 +3,7 @@ import re
 
 
 def timestamp() -> str:
+    # This is a comment
     """Returns a timestamp string in the format of "%Y%m%d%H%M%S"."""
     return datetime.datetime.now().strftime("%Y%m%d%H%M%S")
 
