@@ -1,3 +1,5 @@
+"""Configuration helpers for managing lcmeval runtime settings."""
+
 import os
 import pathlib
 import yaml

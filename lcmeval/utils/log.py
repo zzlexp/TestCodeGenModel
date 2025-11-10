@@ -1,3 +1,5 @@
+"""Central logging configuration shared across lcmeval modules."""
+
 import logging
 import numpy as np
 from logging import Logger as Logger

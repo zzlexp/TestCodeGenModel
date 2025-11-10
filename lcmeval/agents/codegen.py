@@ -1,3 +1,5 @@
+"""Utilities for prompting an LLM to produce NumPy-focused solutions."""
+
 from dataclasses import dataclass
 from typing import Optional
 from lcmeval.utils import LLM

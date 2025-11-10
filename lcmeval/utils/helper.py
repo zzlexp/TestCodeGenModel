@@ -1,3 +1,5 @@
+"""General utility helpers for formatting timestamps and parsing XML snippets."""
+
 import datetime
 import re
 

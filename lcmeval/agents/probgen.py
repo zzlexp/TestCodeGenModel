@@ -1,3 +1,5 @@
+"""Problem generator that uses an LLM to craft NumPy-centric tasks."""
+
 from dataclasses import dataclass
 from typing import Tuple
 from lcmeval.utils import LLM, extract_xml

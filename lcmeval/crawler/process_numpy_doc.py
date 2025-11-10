@@ -1,3 +1,5 @@
+"""Helpers for merging crawled NumPy doc fragments into a single CSV."""
+
 import os
 import json
 import csv

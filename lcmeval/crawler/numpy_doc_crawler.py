@@ -1,3 +1,5 @@
+"""Web crawler for harvesting structured data from the NumPy documentation."""
+
 # coding =utf-8
 import sys
 from venv import logger

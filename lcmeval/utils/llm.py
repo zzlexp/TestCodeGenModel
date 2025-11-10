@@ -1,3 +1,5 @@
+"""Wrapper around the OpenAI client to standardise completion handling."""
+
 import os
 import yaml
 from dataclasses import dataclass
