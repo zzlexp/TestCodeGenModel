@@ -9,6 +9,7 @@ def timestamp() -> str:
 
 
 def extract_xml(text: str, tag: str) -> str:
+    # This is a comment    
     """
     Extracts the content of the specified XML tag from the given text. Used for parsing structured responses 
 
